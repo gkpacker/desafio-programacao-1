@@ -30,6 +30,7 @@ gem 'devise'
 gem 'pundit'
 gem 'jquery-rails'
 gem 'bootstrap-sass'
+gem 'font-awesome-sass', '~> 4.7'
 
 # Use ActiveStorage variant
 # gem 'mini_magick', '~> 4.8'
