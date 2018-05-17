@@ -11,11 +11,8 @@ class IncomesController < ApplicationController
 
   def create
     file = params[:income][:file]
-    if parse(file)
-      redirect_to incomes_path
-    else
-      render :new
-    end
+    parse(file)
+    redirect_to root_path
   end
 
   def parse(file)
