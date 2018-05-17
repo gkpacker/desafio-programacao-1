@@ -1,4 +1,13 @@
-<%= form_for @income do |f| %>
-  <%= f.file_field :file, accept: ".tab" %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-4 col-md-offset-4">
+      <div class="form-container">
+        <%= form_for @income do |f| %>
+          <%= f.file_field :file, accept: ".tab" %>
+          <hr>
+          <%= f.submit "Interpretar arquivo", class: 'btn btn-primary btn-block' %>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
