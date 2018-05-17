@@ -2,7 +2,7 @@ class IncomesController < ApplicationController
   require 'csv'
 
   def index
-    @incomes = Income.all
+    @incomes = Income.where(user: current_user)
   end
 
   def new
