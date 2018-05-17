@@ -1,3 +1,28 @@
-<% @incomes.each do |income| %>
-  <%= income.purchaser_name %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-md-10 col-md-offset-1">
+      <div class="income_table">
+        <table>
+          <tr>
+            <th>Purchaser name</th>
+            <th>Item description</th>
+            <th>Item price</th>
+            <th>Quantity</th>
+            <th>Merchant Address</th>
+            <th>Merchant name</th>
+          </tr>
+          <% @incomes.each do |income| %>
+            <tr class="income">
+              <td><%= income.purchaser_name %></td>
+              <td><%= income.item_description %></td>
+              <td>R$<%= income.item_price %></td>
+              <td><%= income.purchase_count %></td>
+              <td><%= income.merchant_address %></td>
+              <td><%= income.merchant_name %></td>
+            </tr>
+          <% end %>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
